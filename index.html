@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Cargas Transportadas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="./assets/urla1.jpeg" alt="Logotipo" class="logo">
+        <div class="header-info">
+            <input id="Codigo" value="COR-PRO-ATR-01-FOR-01" disabled>
+            <select id="Revisao" required>
+                <option value="" disabled selected>Revisão</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+            </select>
+            <select id="Classificacao" required>
+                <option value="" disabled selected>Clasificação</option>
+                <option value="confidencial">Confidencial</option>
+                <option value="restrito">Restrito</option>
+                <option value="interno">Interno</option>
+                <option value="publico">Público</option>
+            </select>          
+            
+        </div>
+        <div class="header-info">
+            <input type="text" id="origem" placeholder="Origem" required>
+            <input type="text" id="destino" placeholder="Destino" required>
+            <input type="number" id="kmSaida" placeholder="KM de Saída" required>
+            <input type="time" id="horaSaida" required>
+            <input type="date" id="data" required>
+            <input type="text" id="nMotorista" placeholder="Motorista" required>
+            <input type="text" id="motorista" placeholder="Matricula Motorista" required>
+            <input type="text" id="frota" placeholder="Frota" required>
+            <!-- <select id="Classificacao" required>
+                <option value="" disabled selected>Clasificação</option>
+                <option value="confidencial">Confidencial</option>
+                <option value="restrito">Restrito</option>
+                <option value="interno">Interno</option>
+                <option value="publico">Público</option>
+            </select> -->
+            <input type="text" id="reboque1" placeholder="Reboque 1" required>
+            <input type="text" id="reboque2" placeholder="Reboque 2">
+            <input type="text" id="motorista" placeholder="Cargas Transportadas" required>
+        </div>
+    </header>
+    <main>
+        <h1>Checklist de Inspeção</h1>
+        <div class="checklist-container">
+            <form id="checklistForm">
+                <div class="inspection-item">
+                    <label for="item1">Ar Condicionado esta funcionando?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme1" name="item1" value="Conforme" required>
+                    <label for="conforme1">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme1" name="item1" value="Não Conforme">
+                    <label for="naoConforme1">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme1" class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    </div>
+                    </div>
+                    
+                    <div class="inspection-item">
+                    <label for="item2">Veiculo possui documentos atualizados?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme2" name="item2" value="Conforme" required>
+                    <label for="conforme2">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme2" name="item2" value="Não Conforme">
+                    <label for="naoConforme2">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme2" class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    </div>
+                    </div>
+                    
+                    <div class="inspection-item">
+                    <label for="item3">Nivel de agua do radiador esta ok?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme3" name="item3" value="Conforme" required>
+                    <label for="conforme3">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme3" name="item3" value="Não Conforme">
+                    <label for="naoConforme3">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme3" class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    </div>
+                    </div>
+                    
+                    <!-- Continue até o item 40 -->
+                    <div class="inspection-item">
+                    <label for="item4">Nivel oleo motor esta ok?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme4" name="item4" value="Conforme" required>
+                    <label for="conforme4">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme4" name="item4" value="Não Conforme">
+                    <label for="naoConforme4">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme4" class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item5">Luzes de freio e de re estao funcionando?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme5" name="item5" value="Conforme" required>
+                    <label for="conforme5">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme5" name="item5" value="Não Conforme">
+                    <label for="naoConforme5">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme5" class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item6">Buzina e limpadores de para brisa estao funcionando?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme6" name="item6" value="Conforme" required>
+                    <label for="conforme6">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme6" name="item6" value="Não Conforme">
+                    <label for="naoConforme6">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme6" class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item7">Cinto de seguranca esta em condições de uso?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme7" name="item7" value="Conforme" required>
+                    <label for="conforme7">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme7" name="item7" value="Não Conforme">
+                    <label for="naoConforme7">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme7" class="motivo-nao-conforme"
+                    placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item8">Marcador de temperatura esta funcionando?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme8" name="item8" value="Conforme" required>
+                    <label for="conforme8">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme8" name="item8" value="Não Conforme">
+                    <label for="naoConforme8">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme8 class=" motivo-nao-conforme"
+                    placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item9">Óculos,luvas,botinas e colete estão em perfeitas condições?
+                    </label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme9" name="item9" value="Conforme" required>
+                    <label for="conforme9">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme9" name="item9" value="Não Conforme">
+                    <label for="naoConforme9">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme9" class="motivo-nao-conforme"
+                    placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item10">Reboque/semi Reboque está livre de pragas?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme10" name="item10" value="Conforme" required>
+                    <label for="conforme10">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme10" name="item10" value="Não Conforme">
+                    <label for="naoConforme10">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme10" class="motivo-nao-conforme"
+                    placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item11">Freios de serviço e estacionário estão funcionando?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme11" name="item11" value="Conforme"
+                    required>
+                    <label for="conforme11">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme11" name="item11"
+                    value="Não Conforme">
+                    <label for="naoConforme11">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme11" class="motivo-nao-conforme"
+                    placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item12">Luzes de seta, placa, faróis e lanternas estão funcionando?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme12" name="item12" value="Conforme"
+                    required>
+                    <label for="conforme12">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme12" name="item12"
+                    value="Não Conforme">
+                    <label for="naoConforme12">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme12"
+                    class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item13">Pneus estão em boas condições de uso?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme13" name="item13"
+                    value="Conforme" required>
+                    <label for="conforme13">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme13" name="item13"
+                    value="Não Conforme">
+                    <label for="naoConforme13">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme13"
+                    class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item14">Extintor está conforme?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme14" name="item14"
+                    value="Conforme" required>
+                    <label for="conforme14">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme14" name="item14"
+                    value="Não Conforme">
+                    <label for="naoConforme14">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme14"
+                    class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item15">Marcador de pressão do óleo motor esta funcionando?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme15" name="item15"
+                    value="Conforme" required>
+                    <label for="conforme15">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme15" name="item15"
+                    value="Não Conforme">
+                    <label for="naoConforme15">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme15"
+                    class="motivo-nao-conforme" placeholder="Motivo"
+                    style="display:none;">
+                    <div class="inspection-item">
+                    <label for="item16">Possui estepe no veículo?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme16" name="item16" value="Conforme" required>
+                    <label for="conforme16">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme16" name="item16" value="Não Conforme">
+                    <label for="naoConforme16">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme16" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item17">Veículo possui cone?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme17" name="item17" value="Conforme" required>
+                    <label for="conforme17">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme17" name="item17" value="Não Conforme">
+                    <label for="naoConforme17">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme17" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item18">Tacografo esta funcionando?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme18" name="item18" value="Conforme" required>
+                    <label for="conforme18">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme18" name="item18" value="Não Conforme">
+                    <label for="naoConforme18">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme18" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item19">Marcador de combustivel esta funcionando?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme19" name="item19" value="Conforme" required>
+                    <label for="conforme19">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme19" name="item19" value="Não Conforme">
+                    <label for="naoConforme29">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme19" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item20">Parabrisa esta avariado?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme20" name="item20" value="Conforme" required>
+                    <label for="conforme20">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme20" name="item20" value="Não Conforme">
+                    <label for="naoConforme20">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme20" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item21">As asas deltas estao em boas condições?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme21" name="item21" value="Conforme" required>
+                    <label for="conforme21">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme21" name="item21" value="Não Conforme">
+                    <label for="naoConforme21">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme21" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item22">Catracas de amarração estão em boas condições?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme22" name="item22" value="Conforme" required>
+                    <label for="conforme22">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme22" name="item22" value="Não Conforme">
+                    <label for="naoConforme22">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme22" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item23">Cintas de amarração estão em boas condições?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme23" name="item23" value="Conforme" required>
+                    <label for="conforme23">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme23" name="item23" value="Não Conforme">
+                    <label for="naoConforme23">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme23" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item24">Paralamas apresentam avarias?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme24" name="item24" value="Conforme" required>
+                    <label for="conforme24">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme24" name="item24" value="Não Conforme">
+                    <label for="naoConforme24">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme24" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item25">Cabos de engate rápido estão em boas condições?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme25" name="item25" value="Conforme" required>
+                    <label for="conforme25">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme25" name="item25" value="Não Conforme">
+                    <label for="naoConforme25">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme25" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item26">Lonas de sider estão avariadas?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme26" name="item26" value="Conforme" required>
+                    <label for="conforme26">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme26" name="item26" value="Não Conforme">
+                    <label for="naoConforme26">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme26" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item27">Retrovisores estão avariados?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme27" name="item27" value="Conforme" required>
+                    <label for="conforme27">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme27" name="item27" value="Não Conforme">
+                    <label for="naoConforme27">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme27" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item28">Veículo possui triangulo? Macaco? Chave de roda?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme28" name="item28" value="Conforme" required>
+                    <label for="conforme28">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme28" name="item28" value="Não Conforme">
+                    <label for="naoConforme28">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme28" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item29">Cavalo possui 02 calços?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme29" name="item29" value="Conforme" required>
+                    <label for="conforme29">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme29" name="item29" value="Não Conforme">
+                    <label for="naoConforme29">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme29" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item30">Reboque 01 possui 02 pranchas?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme30" name="item30" value="Conforme" required>
+                    <label for="conforme30">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme30" name="item30" value="Não Conforme">
+                    <label for="naoConforme30">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme30" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item31">Reboque 02 possui 02 pranchas?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme31" name="item31" value="Conforme" required>
+                    <label for="conforme31">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme31" name="item31" value="Não Conforme">
+                    <label for="naoConforme31">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme31" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item32">Frota possui extintor de incendio de 06KG?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme32" name="item32" value="Conforme" required>
+                    <label for="conforme32">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme32" name="item32" value="Não Conforme">
+                    <label for="naoConforme32">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme32" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item33">Frota possui extintor de incencio de 02KG?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme33" name="item33" value="Conforme" required>
+                    <label for="conforme33">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme33" name="item33" value="Não Conforme">
+                    <label for="naoConforme33">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme33" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    <div class="inspection-item">
+                    <label for="item34">Reboque/Semi-Reboque possui pranchas?</label>
+                    <div class="inspection-actions">
+                    <input type="radio" id="conforme34" name="item34" value="Conforme" required>
+                    <label for="conforme34">Conforme</label>
+                    
+                    <input type="radio" id="naoConforme34" name="item34" value="Não Conforme">
+                    <label for="naoConforme34">Não Conforme</label>
+                    <input type="text" id="motivoNaoConforme34" class="motivo-nao-conforme" placeholder="Motivo" style="display:none;">
+                    </div>
+                    
+                    </div>
+                    </div>
+                    
+                    </div>
+                <div class="inspection-item">
+                    <label for="item35">Descrição problemas Mecanicos</label>
+                    <input type="text" id="observacoesGerais" name="observacoesGerais" placeholder="Observações">
+                </div>
+                <div class="inspection-item">
+                    <label for="item10">Assinatura do responsável pela inspeção</label>
+                    <input type="text" id="assinaturaResponsavel" name="assinaturaResponsavel" placeholder="Assinatura" required>
+                </div>
+                <!-- Botões de ação -->
+                <div class="action-buttons">
+                    <button type="button" id="savePdfBtn">Salvar como PDF</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 Inspeção Veicular. Elaborado: Diógenes Martins | Verificado: Rógerio | Aprovado: Rógerio</p>
+    </footer>
+</body>
+</html>
